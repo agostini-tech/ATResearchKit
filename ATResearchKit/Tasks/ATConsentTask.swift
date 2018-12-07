@@ -41,10 +41,6 @@ class ATConsentTask: ORKTaskFactory {
         ]
         consentDocument.addSignature(ORKConsentSignature(forPersonWithTitle: nil, dateFormatString: nil, identifier: "ParticipantSignature"))
         
-        
-        let myStep = ORKInstructionStep(identifier: "instructions")
-        myStep.title = "Welcome to ResearchKit"
-        
         return ORKOrderedTask(identifier: "consentTaskID",
                               steps: [
                                 ORKVisualConsentStep(identifier: "visualConsentStepID",
